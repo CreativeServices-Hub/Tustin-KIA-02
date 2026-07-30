@@ -21,7 +21,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("06F1D1F36AC54C22982C70DBB030A240");
+	var comp=AdobeAn.getComposition("3D683F5F13E84C64974524ADB5C0A46B");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -42,7 +42,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib._728x90();
+	exportRoot = new lib._728x90_v2_white();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
